@@ -1,11 +1,11 @@
 import './styles.css';
-import { users } from './util.js';
+import { users } from './util';
 
 // TODO: Hent HTML #id med getElementById
-const searchInput = document.getElementById('name');
-const filterInput = document.getElementById('age');
-const filterButton = document.getElementById('filter');
-const userUl = document.getElementById('users');
+const searchInput = '';
+const filterInput = '';
+const filterButton = '';
+const userUl = '';
 
 const createTableUI = (users) => {
   userUl.innerHTML = null;
@@ -17,46 +17,33 @@ const createTableUI = (users) => {
 
 const handleSearch = () => {
   // TODO: Hent ut verdien fra søke input feltet
-  const searchName = searchInput.value;
+  const searchName = '';
   if (searchName) {
     // Bruk .find for å finne navnet til den brukeren som matcher søkeordet
-    const searchResult = users.find(u => u.name.includes(searchName) );
+    const searchResult = '';
     if (searchResult) {
       // TODO: Oppdatere grensesnittet med createTableUI og resultatet av søket
-      createTableUI(searchResult);
-
     } else {
       // TODO: Oppdatere grensesnittet med userUl.innerHTML og en passende tekst når vi ikke finner noe
-      userUl.innerHTML = "ingen ting ble funnet"
-
     }
   } else {
     // TODO: Hvis ingen søkeord vis default liste med brukere via createTableUI
-    createTableUI(users);
-
   }
 };
 
 const handleFilter = () => {
   // TODO: Hent ut verdien fra filter input feltet
-  const filterValue = Number(filterInput.value);
+  const filterValue = '';
   if (filterValue && Number(filterValue)) {
     // TODO: Bruk .filter for å hente ut de brukeren  som har en alder høyere en filterverdien
-    const filterResult = users.filter(a => a.age > filterValue);
-
+    const filterResult = '';
     if (filterResult && filterResult.length > 0) {
       // TODO: Oppdatere grensesnittet med createTableUI og resultatet av filteret
-      createTableUI(filterResult);
-
     } else {
       // TODO: Oppdatere grensesnittet med userUl.innerHTML og en passende tekst når vi ikke finner noe
-      userUl.innerHTML = 'fant ingen alder';
-
     }
   } else {
     // TODO: Hvis ingen filter eller filteret ikke er et tall vis default liste med brukere via createTableUI
-    createTableUI(users);
-
   }
 };
 
